@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        //        let st = CameraVC(nibName: "CameraVC", bundle: nil)
+//        let st = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! Login
+        //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+        //        let xib = UINib(nibName: "CameraVC", bundle: nil)
+                let st = HomeTabbar(nibName: "HomeTabbar", bundle: nil)
+        let navi = UINavigationController(rootViewController: st)
+        self.window?.rootViewController = navi
+        self.window?.makeKeyAndVisible()
+        FIRApp.configure()
         return true
     }
 
