@@ -13,7 +13,9 @@
 		524D428C2453207800F63E51 /* ListBoomHang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 524D428A2453207800F63E51 /* ListBoomHang.xcdatamodeld */; };
 		524D428E2453207A00F63E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524D428D2453207A00F63E51 /* Assets.xcassets */; };
 		524D42912453207A00F63E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D428F2453207A00F63E51 /* LaunchScreen.storyboard */; };
+		525E3EB72455B9D7009EA3FE /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E3EB62455B9D7009EA3FE /* Tracking.swift */; };
 		5265A30B24533DC500DCD25C /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265A30A24533DC500DCD25C /* FirebaseDatabase.swift */; };
+		52C6D2252455B12D0086E205 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D2242455B12D0086E205 /* UserInfo.swift */; };
 		52CC609D2453243200125139 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52CC609C2453243200125139 /* GoogleService-Info.plist */; };
 		52CC60A5245326DB00125139 /* HomeTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC60A3245326DB00125139 /* HomeTabbar.swift */; };
 		52CC60A6245326DB00125139 /* HomeTabbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CC60A4245326DB00125139 /* HomeTabbar.xib */; };
@@ -38,7 +40,9 @@
 		524D428D2453207A00F63E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524D42902453207A00F63E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524D42922453207A00F63E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525E3EB62455B9D7009EA3FE /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		5265A30A24533DC500DCD25C /* FirebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		52C6D2242455B12D0086E205 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		52CC609C2453243200125139 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52CC60A3245326DB00125139 /* HomeTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabbar.swift; sourceTree = "<group>"; };
 		52CC60A4245326DB00125139 /* HomeTabbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabbar.xib; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		52CC609F2453268900125139 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				52C6D2242455B12D0086E205 /* UserInfo.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				52CC60A72453271300125139 /* Extension.swift */,
+				525E3EB62455B9D7009EA3FE /* Tracking.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525E3EB72455B9D7009EA3FE /* Tracking.swift in Sources */,
 				52CC60B924532F5100125139 /* AddCustom.swift in Sources */,
 				52CC60A82453271300125139 /* Extension.swift in Sources */,
 				52CC60A5245326DB00125139 /* HomeTabbar.swift in Sources */,
@@ -346,6 +353,7 @@
 				524D428C2453207800F63E51 /* ListBoomHang.xcdatamodeld in Sources */,
 				52CC60B524532CE800125139 /* Color.swift in Sources */,
 				52CC60B12453295300125139 /* HomeScreenCell.swift in Sources */,
+				52C6D2252455B12D0086E205 /* UserInfo.swift in Sources */,
 				52CC60AC2453276000125139 /* HomeScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

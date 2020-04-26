@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navi = UINavigationController(rootViewController: st)
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
-        FIRApp.configure()
+//        FIRApp.configure()
+//        FIRDatabase.database().persistenceEnabled = true
         return true
     }
 
@@ -99,6 +100,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    override init() {
+       FIRApp.configure()
+       FIRDatabase.database().persistenceEnabled = true
     }
 
 }

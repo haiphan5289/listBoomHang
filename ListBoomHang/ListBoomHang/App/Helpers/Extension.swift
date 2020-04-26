@@ -3,6 +3,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyJSON
+import Firebase
 
 public protocol CaseIterable {
     associatedtype AllCases: Collection where AllCases.Element == Self
@@ -87,3 +88,31 @@ extension UIView {
         self.layer.cornerRadius = radius
     }
 }
+
+extension UIViewController {
+    func convertDataSnapshotToCodable<T: Codable> (data: FIRDataSnapshot, type: T.Type) -> T? {
+        do {
+            let value = try JSONSerialization.data(withJSONObject: data.value, options: .prettyPrinted)
+            let objec = try JSONDecoder().decode(T.self, from: value)
+            return objec
+        } catch let err {
+            print(err.localizedDescription)
+        }
+        return nil
+    }
+}
+extension UIImage {
+    
+    /// convert image to base64
+    public var base64: String? {
+        return self.jpegData(compressionQuality: 1.0)?.base64EncodedString()
+    }
+    func decodeBase64(toImage strEncodeData: String?) -> UIImage {
+
+        if let decData = Data(base64Encoded: strEncodeData ?? "", options: .ignoreUnknownCharacters), strEncodeData?.count ?? 0 > 0 {
+            return UIImage(data: decData)!
+        }
+        return UIImage(named: "avatar-placeholder") ?? UIImage()
+    }
+}
+
