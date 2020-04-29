@@ -27,11 +27,11 @@
 		52CC60B524532CE800125139 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC60B424532CE800125139 /* Color.swift */; };
 		52CC60B924532F5100125139 /* AddCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC60B724532F5100125139 /* AddCustom.swift */; };
 		52CC60BA24532F5100125139 /* AddCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CC60B824532F5100125139 /* AddCustom.xib */; };
-		A64AAF6487F609B5170DED82 /* Pods_ListBoomHang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56870C24240C636C5DDD36EE /* Pods_ListBoomHang.framework */; };
+		AD9B3C9EDD688E83D465B6C4 /* Pods_ListBoomHang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3E0667E1AA65DB3F9B6F2 /* Pods_ListBoomHang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		365DD8181431EB168E55EBD1 /* Pods-ListBoomHang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListBoomHang.debug.xcconfig"; path = "Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang.debug.xcconfig"; sourceTree = "<group>"; };
+		38E72F7D0101F033D9273C45 /* Pods-ListBoomHang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListBoomHang.debug.xcconfig"; path = "Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang.debug.xcconfig"; sourceTree = "<group>"; };
 		524D42802453207800F63E51 /* ListBoomHang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListBoomHang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524D42832453207800F63E51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524D42852453207800F63E51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +54,8 @@
 		52CC60B424532CE800125139 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		52CC60B724532F5100125139 /* AddCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustom.swift; sourceTree = "<group>"; };
 		52CC60B824532F5100125139 /* AddCustom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCustom.xib; sourceTree = "<group>"; };
-		56870C24240C636C5DDD36EE /* Pods_ListBoomHang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListBoomHang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D85B8659351868DE232415 /* Pods-ListBoomHang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListBoomHang.release.xcconfig"; path = "Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang.release.xcconfig"; sourceTree = "<group>"; };
+		5EB3E0667E1AA65DB3F9B6F2 /* Pods_ListBoomHang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListBoomHang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CA71D958FFE4D6F5743229 /* Pods-ListBoomHang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListBoomHang.release.xcconfig"; path = "Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,26 +63,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A64AAF6487F609B5170DED82 /* Pods_ListBoomHang.framework in Frameworks */,
+				AD9B3C9EDD688E83D465B6C4 /* Pods_ListBoomHang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29EFBB1FB2F832BB114BB0D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				56870C24240C636C5DDD36EE /* Pods_ListBoomHang.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		35B58D4F33D89AA40C17A7EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				365DD8181431EB168E55EBD1 /* Pods-ListBoomHang.debug.xcconfig */,
-				92D85B8659351868DE232415 /* Pods-ListBoomHang.release.xcconfig */,
+				38E72F7D0101F033D9273C45 /* Pods-ListBoomHang.debug.xcconfig */,
+				C4CA71D958FFE4D6F5743229 /* Pods-ListBoomHang.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -93,7 +85,7 @@
 				524D42822453207800F63E51 /* ListBoomHang */,
 				524D42812453207800F63E51 /* Products */,
 				35B58D4F33D89AA40C17A7EF /* Pods */,
-				29EFBB1FB2F832BB114BB0D1 /* Frameworks */,
+				E27C02DB3568CF6DBCE49930 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +197,14 @@
 			path = AddCustom;
 			sourceTree = "<group>";
 		};
+		E27C02DB3568CF6DBCE49930 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EB3E0667E1AA65DB3F9B6F2 /* Pods_ListBoomHang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,12 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 524D42952453207A00F63E51 /* Build configuration list for PBXNativeTarget "ListBoomHang" */;
 			buildPhases = (
-				E38E825CD9E6CC32E643B900 /* [CP] Check Pods Manifest.lock */,
+				B25D3757D8B0248C13ACE2DD /* [CP] Check Pods Manifest.lock */,
 				524D427C2453207800F63E51 /* Sources */,
 				524D427D2453207800F63E51 /* Frameworks */,
 				524D427E2453207800F63E51 /* Resources */,
-				2AA5FBB08FD0449615499190 /* [CP] Embed Pods Frameworks */,
-				0C97E19385C38CAEFD3AA306 /* [CP] Copy Pods Resources */,
+				219709C5BB327C7E7712303E /* [CP] Embed Pods Frameworks */,
+				5527E5013914525B164458C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,24 +280,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C97E19385C38CAEFD3AA306 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2AA5FBB08FD0449615499190 /* [CP] Embed Pods Frameworks */ = {
+		219709C5BB327C7E7712303E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,7 +297,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E38E825CD9E6CC32E643B900 /* [CP] Check Pods Manifest.lock */ = {
+		5527E5013914525B164458C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ListBoomHang/Pods-ListBoomHang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25D3757D8B0248C13ACE2DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,10 +498,11 @@
 		};
 		524D42962453207A00F63E51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 365DD8181431EB168E55EBD1 /* Pods-ListBoomHang.debug.xcconfig */;
+			baseConfigurationReference = 38E72F7D0101F033D9273C45 /* Pods-ListBoomHang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DEFL2P6EJX;
 				INFOPLIST_FILE = ListBoomHang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,10 +517,11 @@
 		};
 		524D42972453207A00F63E51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D85B8659351868DE232415 /* Pods-ListBoomHang.release.xcconfig */;
+			baseConfigurationReference = C4CA71D958FFE4D6F5743229 /* Pods-ListBoomHang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DEFL2P6EJX;
 				INFOPLIST_FILE = ListBoomHang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

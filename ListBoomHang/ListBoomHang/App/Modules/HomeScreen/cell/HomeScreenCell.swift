@@ -38,4 +38,38 @@ class HomeScreenCell: UITableViewCell {
             self.avtarImg.image = img
         }
     }
+//        let queue = DispatchQueue(label: "queue", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+//        queue.async {
+//            if let url = URL(string: "https://imgur.com/cvTDioX") {
+//                do {
+//                    let data = try Data(contentsOf: url)
+//                    DispatchQueue.main.async {
+//                        self.avtarImg.image = UIImage(data: data)
+//                    }
+//                } catch let err {
+//                    print(err.localizedDescription)
+//                }
+//            }
+//        }
+//    }
+//            DispatchQueue.main.async {
+//                    if let image_dowload = UIImage(data: data!){
+////                        activies.stopAnimating()
+//                        //tăng speed dowload
+////                        image_Cache.setObject(image_dowload, forKey: link as AnyObject)
+//                        self.avtarImg.image = image_dowload
+//                }
+//            }
+
+//        }
+//    }
+//    func downloadFile(file: GTLDriveFile){
+//        let url = "https://www.googleapis.com/drive/v3/files/\(file.identifier!)?alt=media"
+//
+//        let fetcher = drive.fetcherService.fetcherWithURLString(url)
+//
+//        fetcher.beginFetchWithDelegate(
+//            self,
+//            didFinishSelector: #selector(ViewController.finishedFileDownload(_:finishedWithData:error:)))
+//    }
 }

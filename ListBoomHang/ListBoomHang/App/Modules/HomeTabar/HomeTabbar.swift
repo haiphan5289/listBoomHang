@@ -17,11 +17,11 @@ enum TabbarType: Int, CaseIterable {
     var icon: (normal: UIImage?, selected: UIImage?) {
         switch self {
         case .home:
-            return (UIImage(named: "ic_menu_home_inactive"), UIImage(named: "ic_menu_home_active"))
+            return (UIImage(named: "ic_boom"), UIImage(named: "ic_boom"))
         case .notify:
-            return (UIImage(named: "ic_notify_inactive"), UIImage(named: "ic_notify_inactive"))
+            return (UIImage(named: "plus"), UIImage(named: "plus"))
         case .search:
-            return (UIImage(named: "ic_search_inactve"), UIImage(named: "ic_search_inactve"))
+            return (UIImage(named: "plus"), UIImage(named: "plus"))
         case .profile:
             return (UIImage(named: "ic_user_inactive"), UIImage(named: "ic_user_inactive"))
         }

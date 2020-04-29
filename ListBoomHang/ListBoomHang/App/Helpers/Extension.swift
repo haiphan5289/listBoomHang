@@ -90,7 +90,7 @@ extension UIView {
 }
 
 extension UIViewController {
-    func convertDataSnapshotToCodable<T: Codable> (data: FIRDataSnapshot, type: T.Type) -> T? {
+    func convertDataSnapshotToCodable<T: Codable> (data: DataSnapshot, type: T.Type) -> T? {
         do {
             let value = try JSONSerialization.data(withJSONObject: data.value, options: .prettyPrinted)
             let objec = try JSONDecoder().decode(T.self, from: value)

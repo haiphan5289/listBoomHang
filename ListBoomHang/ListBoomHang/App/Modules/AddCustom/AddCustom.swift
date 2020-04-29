@@ -43,10 +43,10 @@ class AddCustom: UIViewController {
     private var btImage: UIButton = UIButton(type: .system)
     private var imgBase64: String = ""
     private var isEnableButton: Bool = false
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRDatabase.database().reference()
+        ref = Database.database().reference()
         visualize()
         setupRX()
     }

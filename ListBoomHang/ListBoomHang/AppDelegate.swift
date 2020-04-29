@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navi = UINavigationController(rootViewController: st)
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
-//        FIRApp.configure()
+//        FirebaseApp.configure()
 //        FIRDatabase.database().persistenceEnabled = true
         return true
     }
@@ -102,8 +102,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     override init() {
-       FIRApp.configure()
-       FIRDatabase.database().persistenceEnabled = true
+//        DispatchQueue.main.async {
+//            FIRApp.configure()
+//            FIRDatabase.database().persistenceEnabled = true
+//        }
+        FirebaseApp.configure()
     }
 
 }

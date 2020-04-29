@@ -23,6 +23,6 @@ enum FirebaseTable {
 
 class FirebaseDatabase {
     static var instance = FirebaseDatabase()
-    var ref: FIRDatabaseReference = FIRDatabase.database().reference()
-    var storage = FIRStorage.storage().reference()
+    var ref: DatabaseReference = Database.database().reference()
+    var storage = Storage.storage().reference()
 }

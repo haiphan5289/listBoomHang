@@ -17,21 +17,26 @@ class HomeScreenVC: UIViewController, ActivityTrackingProgressProtocol {
 
     private let tableView: UITableView = UITableView(frame: .zero, style: .grouped)
     private var dataSource: [UserInfo] = []
-    private var ref: FIRDatabaseReference!
+    private var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRDatabase.database().reference()
+        ref = Database.database().reference()
         visualize()
         setupRX()
     }
     private func setupRX() {
-        ref.child("\(FirebaseTable.listUser.table)").observe(.childAdded) { (data) in
+        LoadingManager.instance.show()
+        self.ref.child("\(FirebaseTable.listUser.table)").observe(.childAdded) { (data) in
             if let user = self.convertDataSnapshotToCodable(data: data, type: UserInfo.self) {
                 self.dataSource.append(user)
                 self.tableView.reloadData()
+                LoadingManager.instance.dismiss()
             }
         }
+        
     }
+
+    
     private func visualize() {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
@@ -57,7 +62,7 @@ extension HomeScreenVC: UITableViewDelegate {
 }
 extension HomeScreenVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return self.dataSource.count 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
