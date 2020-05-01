@@ -5,6 +5,8 @@ import RxCocoa
 import SwiftyJSON
 import Firebase
 
+let image_Cache = NSCache<AnyObject, AnyObject>()
+
 public protocol CaseIterable {
     associatedtype AllCases: Collection where AllCases.Element == Self
     static var allCases: AllCases { get }
@@ -108,11 +110,45 @@ extension UIImage {
         return self.jpegData(compressionQuality: 1.0)?.base64EncodedString()
     }
     func decodeBase64(toImage strEncodeData: String?) -> UIImage {
-
+        
         if let decData = Data(base64Encoded: strEncodeData ?? "", options: .ignoreUnknownCharacters), strEncodeData?.count ?? 0 > 0 {
             return UIImage(data: decData)!
         }
         return UIImage(named: "avatar-placeholder") ?? UIImage()
     }
+    
+}
+
+extension UIImageView {
+    func loadhinh(link: String){
+        //add cache đã lưu vào image, để khỏi load lần nữa
+        if let image_cache_data = image_Cache.object(forKey: link as AnyObject) {
+            self.image = image_cache_data as! UIImage
+            //return như vậy, để khởi chạy dòng cuối dưới
+            return
+        }
+        let activies: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+        activies.frame = CGRect(x: self.frame.width / 2, y: self.frame.height / 2, width: 0, height: 0)
+        activies.color = .blue
+        activies.startAnimating()
+        self.addSubview(activies)
+        let queue = DispatchQueue(label: "queue", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+        queue.async {
+//            let url = URL(string: link)
+//            let data = try? Data(contentsOf: url ?? URL(string: "")!)
+            let data = UIImage().decodeBase64(toImage: link)
+            DispatchQueue.main.async {
+//                if let image_dowload = data {
+                    activies.stopAnimating()
+                    //tăng speed dowload
+                    image_Cache.setObject(data, forKey: link as AnyObject)
+                    self.image = data
+//                }
+            }
+            
+        }
+        
+    }
+
 }
 

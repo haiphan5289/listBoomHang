@@ -13,10 +13,14 @@ import SVProgressHUD
 import SnapKit
 import Firebase
 
+
 class HomeScreenVC: UIViewController, ActivityTrackingProgressProtocol {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     private let tableView: UITableView = UITableView(frame: .zero, style: .grouped)
     private var dataSource: [UserInfo] = []
+    private var filterdata: [UserInfo] = []
+    private let disposebag = DisposeBag()
     private var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,12 @@ class HomeScreenVC: UIViewController, ActivityTrackingProgressProtocol {
             }
         }
         
+        self.searchBar.rx.text.bind { (value) in
+            guard let text = value else { return }
+            self.filterdata =  self.dataSource.filter { ($0.userName?.contains(text) ?? true) }
+            self.tableView.reloadData()
+        }.disposed(by: disposebag)
+        
     }
 
     
@@ -44,9 +54,11 @@ class HomeScreenVC: UIViewController, ActivityTrackingProgressProtocol {
         tableView.dataSource = self
         tableView.register(HomeScreenCell.nib, forCellReuseIdentifier: HomeScreenCell.identifier)
         
+        
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view.safeAreaLayoutGuide)
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(self.searchBar.snp.bottom)
         }
     }
 
@@ -62,6 +74,9 @@ extension HomeScreenVC: UITableViewDelegate {
 }
 extension HomeScreenVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.filterdata.count > 0 {
+            return self.filterdata.count
+        }
         return self.dataSource.count 
     }
     

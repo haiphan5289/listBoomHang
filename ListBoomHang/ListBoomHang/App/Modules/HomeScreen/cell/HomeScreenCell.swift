@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeScreenCell: UITableViewCell {
 
@@ -33,10 +34,12 @@ class HomeScreenCell: UITableViewCell {
         self.lbUserName.text = model.userName
         self.lbNumberPhone.text = model.numberPhone
         self.lbDes.text = "\(model.strFB ?? "")\n\(model.description ?? "")"
-        DispatchQueue.main.async {
-            let img = UIImage().decodeBase64(toImage: model.avatarImage)
-            self.avtarImg.image = img
-        }
+//        DispatchQueue.main.async {
+//            let img = UIImage().decodeBase64(toImage: model.avatarImage)
+////            self.avtarImg.kf.set
+//            self.avtarImg.image = img
+//        }
+        self.avtarImg.loadhinh(link: model.avatarImage ?? "")
     }
 //        let queue = DispatchQueue(label: "queue", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
 //        queue.async {
